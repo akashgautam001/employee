@@ -1,0 +1,19 @@
+﻿@model CrudWithStoreprocedure.Models.Customer
+@{
+    ViewBag.Title = "login";
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+<div class="col-lg-12">
+    <div class="col-lg-offset-4">
+        <form action="/Home/Login" method="post">
+            <label>Email</label>
+            @Html.TextBoxFor(Model => Model.Email, new { @class = "form-control" })
+            <label>Password</label>
+            @Html.TextBoxFor(Model => Model.Password, new { @class = "form-control" })<br />
+            <input type="submit" value="login" class="form-control btn btn-outline-primary"style="background:blue;color:white" />
+        </form>
+    </div>
+</div>
+
